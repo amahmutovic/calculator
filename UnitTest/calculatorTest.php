@@ -1,9 +1,9 @@
 <?php
 
-require_once '../calculator.php';
+//require_once '../calculator.php';
 
 
-class ReshapeDataParserFlashTest extends PHPUnit_Framework_TestCase
+class CalculatorTest extends PHPUnit_Framework_TestCase
 {
   
     public $object;
@@ -13,7 +13,7 @@ class ReshapeDataParserFlashTest extends PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->object = new calculator();
+        $this->object = new Calculator();
         
         
     }

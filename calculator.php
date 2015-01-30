@@ -1,5 +1,5 @@
 <?php
-class calculator
+class Calculator
 {
 	
 	public sub ($par1,$par2)
