@@ -1,6 +1,6 @@
 <?php
 
-//require_once '../calculator.php';
+require_once 'calculator.php';
 
 
 class CalculatorTest extends PHPUnit_Framework_TestCase
