@@ -2,5 +2,4 @@ test:
   override:
     - phpunit UnitTest
 dependencies:
-	
-- gem install rspec_junit_formatter	
+	gem install rspec_junit_formatter	
