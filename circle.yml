@@ -1,7 +1,15 @@
+dependencies:
+  override:
+    - mkdir -p build/logs
+    - composer install --dev --no-interaction
+    - pecl install xdebug
+    - cat ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini | sed -e "s/;//" > xdebug.ini
+    - mv xdebug.ini ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
+	
 test:
   pre:
     - mkdir unit_test_reports
   override:
     - phpunit --log-junit unit_test_reports/sonar-report.xml --coverage-clover unit_test_reports/sonar-report-coverage.xml UnitTest
   post:
-    - cp unit_test_reports/sonar-report-coverage.xml $CIRCLE_ARTIFACTS
+    - cp -R unit_test_reports/* $CIRCLE_ARTIFACTS
