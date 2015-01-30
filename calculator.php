@@ -2,11 +2,11 @@
 class Calculator
 {
 	
-	public sub ($par1,$par2)
+	public sub($par1,$par2)
 	{
 		return $par1-$par2;
 	}
-	public add ($par1,$par2)
+	public add($par1,$par2)
 	{
 		return $par1+$par2;
 	}
