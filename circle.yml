@@ -4,6 +4,7 @@ dependencies:
     - composer install --dev --no-interaction
     - pecl install xdebug
     - ls -la ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/
+    - echo "extension=xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
 test:
   pre:
     - mkdir unit_test_reports
