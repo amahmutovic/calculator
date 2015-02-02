@@ -20,3 +20,4 @@ deployment:
     branch: production
     commands:
       - ./merge_to_master.sh
+	-./deployment
