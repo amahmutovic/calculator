@@ -3,7 +3,7 @@ dependencies:
     - mkdir -p build/logs
     - composer install --dev --no-interaction
     - pecl install xdebug
-    - sed -i 's/^;//' ~/.phpenv/versions/$(phpenv global)/etc/conf.d/xdebug.ini
+    - echo "extension = xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 test:
   pre:
     - mkdir unit_test_reports
