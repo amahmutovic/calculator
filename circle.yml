@@ -17,10 +17,10 @@ test:
     - cp -R unit_test_reports/* $CIRCLE_ARTIFACTS
 deployment:
   production:
-     branch: production
+    branch: production
       commands:
       - ./deploy_prod.sh
-     staging:
-     branch: master
+  staging:
+    branch: master
       commands:
       - ./deploy_staging.sh
