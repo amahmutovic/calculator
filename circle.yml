@@ -8,7 +8,7 @@ dependencies:
     - ls -la /usr/bin/X11
     - ls -la /usr/share/php
     - ls -la /etc/php.d
-    - echo "extension = xdebug.so" >> /etc/php.ini
+    - echo "extension = xdebug.so" >> /etc/php.d/thrift_protocol.ini
 test:
   pre:
     - mkdir unit_test_reports
