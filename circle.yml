@@ -16,11 +16,11 @@ test:
   post:
     - cp -R unit_test_reports/* $CIRCLE_ARTIFACTS
 deployment:
-  master:
+   master:
     branch: master
     commands:
-     - ./deploy_master.sh
-   production:
+      - ./deploy_master.sh
+  production:
     branch: production
     commands:
-     - ./deploy_master.sh 
+      - ./deploy_prod.sh
