@@ -3,10 +3,11 @@ dependencies:
     - mkdir -p build/logs
     - composer install --dev --no-interaction
     - pecl install xdebug
-    - ls -la /usr/lib/php/
-    - ls -la /usr/bin/X11/
-    - ls -la /usr/share/php/
-    - ls -la /etc/php.d/
+    - ls -la /usr/bin/php
+    - ls -la /usr/lib/php
+    - ls -la /usr/bin/X11
+    - ls -la /usr/share/php
+    - ls -la /etc/php.d
     - echo "extension = xdebug.so" >> /etc/php.ini
 test:
   pre:
