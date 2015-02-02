@@ -16,8 +16,12 @@ test:
   post:
     - cp -R unit_test_reports/* $CIRCLE_ARTIFACTS
 deployment:
-  automerge:
-    branch: production
+  master:
+    branch: master
     commands:
-      - ./merge_to_master.sh
-	-./deployment
+      - ./deploy_master.sh
+   production:
+     branch:production
+     commands:
+      - ./deploy_master.sh
+	  
