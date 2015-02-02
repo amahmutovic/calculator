@@ -20,7 +20,7 @@ deployment:
       branch: production
       commands:
       - ./deploy_prod.sh
-   master:
-   branch: master
-    commands:
+   staging:
+      branch: master
+      commands:
        - ./deploy_staging.sh
