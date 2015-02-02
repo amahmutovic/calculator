@@ -19,9 +19,8 @@ deployment:
   master:
     branch: master
     commands:
-      - ./deploy_master.sh
+     - ./deploy_master.sh
    production:
-     branch:production
-     commands:
-      - ./deploy_master.sh
-	  
+    branch: production
+    commands:
+     - ./deploy_master.sh 
