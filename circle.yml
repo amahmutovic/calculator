@@ -23,4 +23,5 @@ deployment:
    staging:
       branch: master
       commands:
+       - ls -la ./deploy_staging.sh
        - ./deploy_staging.sh
