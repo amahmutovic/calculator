@@ -15,13 +15,20 @@ test:
     - phpunit --log-junit unit_test_reports/sonar-report.xml --coverage-clover unit_test_reports/sonar-report-coverage.xml UnitTest
   post:
     - cp -R unit_test_reports/* $CIRCLE_ARTIFACTS
-
 deployment:
-  production:
+  deploy_staging:
+    branch: staging
+    commands:
+    - heroku maintenance:on --app calculator
+    - git push git@heroku.com:calculator.git $CIRCLE_SHA1:refs/heads/master
+    - heroku run rake db:migrate --app calculator
+    - heroku restart --app calculator
+    - heroku maintenance:off --app calculator
+  deploy_production:
     branch: production
     commands:
-    - ./deploy_prod.sh
-  staging:
-    branch: master
-    commands:
-    - ./deploy_staging.sh 
+    - heroku maintenance:on --app calculator
+    - git push git@heroku.com:calculator.git $CIRCLE_SHA1:refs/heads/master
+    - heroku run rake db:migrate --app calculator
+    - heroku restart --app calculator
+    - heroku maintenance:off --app calculator

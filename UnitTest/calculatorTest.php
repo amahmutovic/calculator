@@ -32,7 +32,7 @@ class CalculatorTest extends PHPUnit_Framework_TestCase
 	 public function testSub()
     {
 
-        $this->assertEquals(1,$this->object->sub(3,2));
+        $this->assertEquals(1,$this->object->s(3,2));
        
     }
 
