@@ -4,7 +4,8 @@ machine:
 dependencies:
   cache_directories:
       - get-pip
-  pre: - if [[ ! -e get-pip ]]; then wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py && sudo pip install robotframework==2.8.7 && sudo pip install robotframework-selenium2library; fi
+  pre: 
+      - if [[ ! -e get-pip ]]; then wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py && sudo pip install robotframework==2.8.7 && sudo pip install robotframework-selenium2library; fi
   override:
       - mkdir -p build/logs
       - composer install --dev --no-interaction
@@ -27,4 +28,4 @@ deployment:
   production:
     branch: master
     commands:
-      - echo Go to
+      - echo DO something
