@@ -2,6 +2,8 @@ machine:
   php:
     version: 5.3.3
 dependencies:
+  cache_directories:
+    - xdebug
   override:
     - mkdir -p build/logs
     - composer install --dev --no-interaction
