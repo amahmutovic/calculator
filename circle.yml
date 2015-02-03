@@ -8,6 +8,7 @@ dependencies:
     - pecl install xdebug
     - ls -la ~/.phpenv/versions/$(phpenv version-name)
     - echo "extension=xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
+dependencies:
    post:
       - wget https://robotframework.googlecode.com/files/robotframework-2.8.1.win-amd64.exe
 test:
@@ -21,4 +22,4 @@ deployment:
   production:
     branch: master
     commands:
-      - echo Go to 
+      - echo Go to
