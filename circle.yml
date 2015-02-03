@@ -2,15 +2,15 @@ machine:
   php:
     version: 5.3.3
 dependencies:
-   pre:
-    - bash ./install-xdebug
+  pre:
+      - bash ./install-xdebug
   override:
-    - mkdir -p build/logs
-    - composer install --dev --no-interaction
-    - composer update
-    - pecl install xdebug
-    - ls -la ~/.phpenv/versions/$(phpenv version-name)
-    - echo "extension=xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
+      - mkdir -p build/logs
+      - composer install --dev --no-interaction
+      - composer update
+      - pecl install xdebug
+      - ls -la ~/.phpenv/versions/$(phpenv version-name)
+      - echo "extension=xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
   post:
       - wget https://pypi.python.org/packages/source/r/robotframework/robotframework-2.8.7.tar.gz
       - tar -zxvf robotframework-2.8.7.tar.gz
