@@ -10,8 +10,7 @@ dependencies:
     - echo "extension=xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
 dependencies:
    post:
-      https://pypi.python.org/packages/source/r/robotframework/robotframework-2.8.7.tar.gz
-    
+      - wget https://pypi.python.org/packages/source/r/robotframework/robotframework-2.8.7.tar.gz
 test:
   pre:
     - mkdir unit_test_reports
