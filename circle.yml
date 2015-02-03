@@ -12,7 +12,7 @@ dependencies:
    post:
       - wget https://pypi.python.org/packages/source/r/robotframework/robotframework-2.8.7.tar.gz
       - tar -zxvf robotframework-2.8.7.tar.gz  
-      - install ./robotframework-2.8.7
+      - install robotframework-2.8.7
       
 test:
   pre:
