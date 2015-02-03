@@ -2,14 +2,21 @@ machine:
   php:
     version: 5.3.3
 dependencies:
+  cache_directories:
+    - "home/ubuntu"
   override:
     - mkdir -p build/logs
     - composer install --dev --no-interaction
     - pecl install xdebug
     - ls -la ~/.phpenv/versions/$(phpenv version-name)
     - echo "extension=xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
-  cache_directories:
-      - home/ubuntu
+  post:
+      - wget https://pypi.python.org/packages/source/r/robotframework/robotframework-2.8.7.tar.gz
+      - tar -zxvf robotframework-2.8.7.tar.gz
+      - wget https://bootstrap.pypa.io/get-pip.py
+      - sudo python get-pip.py
+      - sudo pip install robotframework==2.8.7	  
+      - sudo pip install robotframework-selenium2library
 test:
   pre:
     - mkdir unit_test_reports
