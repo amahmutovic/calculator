@@ -11,13 +11,9 @@ dependencies:
   post:
       - wget https://pypi.python.org/packages/source/r/robotframework/robotframework-2.8.7.tar.gz
       - tar -zxvf robotframework-2.8.7.tar.gz
-      - sudo apt-get install python2.7-dev
-      - sudo apt-get install python-setuptools
-      - sudo apt-get install python-pip
-      - sudo apt-get install python-wxgtk2.8
-      - sudo apt-get install python-wxversion
-      - sudo pip install robotframework
-      - sudo pip install robotframework-ride
+      - wget https://bootstrap.pypa.io/get-pip.py
+      - sudo python get-pip.py
+      - sudo pip install robotframework==2.8.7	  
       - sudo pip install robotframework-seleniumlibrary
 test:
   pre:
