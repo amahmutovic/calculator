@@ -11,10 +11,9 @@ dependencies:
 dependencies:
    post:
       - wget https://pypi.python.org/packages/source/r/robotframework/robotframework-2.8.7.tar.gz
-      - tar -zxvf robotframework-2.8.7.tar.gz    
-      - ./robotframework-2.8.7
-      - make 
-      - make install
+      - tar -zxvf robotframework-2.8.7.tar.gz  
+      - pecl install ./robotframework-2.8.7
+      
 test:
   pre:
     - mkdir unit_test_reports
