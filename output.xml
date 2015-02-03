@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20150203 14:22:20.761" generator="Robot 2.8.1 (Python 2.7.9 on win32)">
+<suite source="C:\Users\armin\Documents\GitHub\calculator\testSearch.txt" id="s1" name="testSearch">
+<test id="s1-t1" name="Open Page">
+<kw type="kw" name="Open Search Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20150203 14:22:21.091" level="INFO">Opening browser 'ff' to base url 'http://www.bing.com/'</msg>
+<status status="PASS" endtime="20150203 14:22:28.968" starttime="20150203 14:22:21.091"></status>
+</kw>
+<status status="PASS" endtime="20150203 14:22:28.969" starttime="20150203 14:22:21.090"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Maximize Browser Window">
+<doc>Maximizes current browser window.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150203 14:22:30.027" starttime="20150203 14:22:28.973"></status>
+</kw>
+<kw type="kw" name="Input Query Text">
+<doc></doc>
+<arguments>
+<arg>nba</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>sb_form_q</arg>
+<arg>${query}</arg>
+</arguments>
+<msg timestamp="20150203 14:22:30.043" level="INFO">Typing text 'nba' into text field 'sb_form_q'</msg>
+<status status="PASS" endtime="20150203 14:22:30.690" starttime="20150203 14:22:30.042"></status>
+</kw>
+<status status="PASS" endtime="20150203 14:22:30.690" starttime="20150203 14:22:30.041"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>sb_form_go</arg>
+</arguments>
+<msg timestamp="20150203 14:22:30.691" level="INFO">Clicking button 'sb_form_go'.</msg>
+<status status="PASS" endtime="20150203 14:22:31.279" starttime="20150203 14:22:30.691"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20150203 14:22:31.281" level="FAIL">Keyword 'Selenium2Library.Click Link' expected 1 argument, got 0.</msg>
+<status status="FAIL" endtime="20150203 14:22:31.281" starttime="20150203 14:22:31.280"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20150203 14:22:31.281" critical="yes" starttime="20150203 14:22:21.089">Keyword 'Selenium2Library.Click Link' expected 1 argument, got 0.</status>
+</test>
+<doc>A resource file with reusable keywords and variables.
+
+The system specific keywords created here form our own
+domain specific language. They utilize keywords provided
+by the imported Selenium2Library.</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20150203 14:22:31.283" starttime="20150203 14:22:20.762"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" pass="0" id="s1" name="testSearch">testSearch</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
