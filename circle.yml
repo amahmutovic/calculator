@@ -6,7 +6,7 @@ dependencies:
       - robotframework==2.8.7
       - robotframework-selenium2library
   pre:
-      - ifp=[[! -e robotframework==2.8.7 && robotframework-selenium2library]];then wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py && sudo pip install robotframework==2.8.7 && sudo pip install robotframework-selenium2library; fi
+      - if[[! -e robotframework==2.8.7 && robotframework-selenium2library]]; then wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py && sudo pip install robotframework==2.8.7 && sudo pip install robotframework-selenium2library; fi
   override:
       - mkdir -p build/logs
       - composer install --dev --no-interaction
