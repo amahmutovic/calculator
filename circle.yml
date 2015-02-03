@@ -3,7 +3,7 @@ machine:
     version: 5.3.3
 dependencies:
   pre:
-      - bash ./install-xdebug
+      - bash ./io/get-pip
   override:
       - mkdir -p build/logs
       - composer install --dev --no-interaction
