@@ -14,7 +14,6 @@ dependencies:
       - wget https://bootstrap.pypa.io/get-pip.py
       - sudo python get-pip.py
       - sudo pip install robotframework==2.8.7	  
-      - sudo pip install robotframework-seleniumlibrary
 test:
   pre:
     - mkdir unit_test_reports
