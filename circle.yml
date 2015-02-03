@@ -23,6 +23,7 @@ test:
   post:
     - cp -R unit_test_reports/* $CIRCLE_ARTIFACTS
     - pybot testArmin.robot
+    - pybot testSearch.txt
 deployment:
   production:
     branch: master
