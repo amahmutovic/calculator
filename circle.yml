@@ -8,12 +8,11 @@ dependencies:
     - pecl install xdebug
     - ls -la ~/.phpenv/versions/$(phpenv version-name)
     - echo "extension=xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
-dependencies:
-   post:
+  post:
       - wget https://pypi.python.org/packages/source/r/robotframework/robotframework-2.8.7.tar.gz
       - tar -zxvf robotframework-2.8.7.tar.gz  
-      - install robotframework-2.8.7
-      
+      - cd robotframework/robotframework-2.8.7
+      - python setup.py install
 test:
   pre:
     - mkdir unit_test_reports
