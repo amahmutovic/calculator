@@ -11,9 +11,6 @@ dependencies:
 dependencies:
    post:
       - wget https://robotframework.googlecode.com/files/robotframework-2.8.1.win-amd64.exe
-      - wget http://selenium-release.storage.googleapis.com/2.44/selenium-server-standalone-2.44.0.jar
-      - java -jar selenium-server-standalone-2.44.0.jar:
-            background: true
 test:
   pre:
     - mkdir unit_test_reports
