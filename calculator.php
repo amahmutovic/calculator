@@ -10,8 +10,6 @@ class Calculator
 	{
 		return $par1+$par2;
 	}
-
-
+	
 }
-
 ?>
