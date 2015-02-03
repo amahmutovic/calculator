@@ -12,7 +12,8 @@ dependencies:
       - wget https://pypi.python.org/packages/source/r/robotframework/robotframework-2.8.7.tar.gz
       - tar -zxvf robotframework-2.8.7.tar.gz  
       - cd robotframework-2.8.7
-      - pwd	  
+      - python /home/ubuntu/calculator/robotframework-2.8.7/setup.py install
+	  
 test:
   pre:
     - mkdir unit_test_reports
