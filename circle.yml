@@ -11,6 +11,7 @@ dependencies:
 dependencies:
    post:
       - wget https://robotframework.googlecode.com/files/robotframework-2.8.1.win-amd64.exe
+      -python -m robotframework.run
 test:
   pre:
     - mkdir unit_test_reports
