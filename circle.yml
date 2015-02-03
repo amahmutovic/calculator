@@ -5,7 +5,7 @@ dependencies:
   override:
     - mkdir -p build/logs
     - composer install --dev --no-interaction
-    - /usr/local/bin/composer self-update
+    - composer update
     - pecl install xdebug
     - ls -la ~/.phpenv/versions/$(phpenv version-name)
     - echo "extension=xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
