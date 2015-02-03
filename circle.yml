@@ -13,7 +13,8 @@ dependencies:
       - tar -zxvf robotframework-2.8.7.tar.gz
       - wget https://bootstrap.pypa.io/get-pip.py
       - sudo python get-pip.py
-      - sudo pip install robotframework==2.8.7      
+      - sudo pip install robotframework==2.8.7    
+	  
 test:
   pre:
     - mkdir unit_test_reports
@@ -21,6 +22,7 @@ test:
     - phpunit --log-junit unit_test_reports/sonar-report.xml --coverage-clover unit_test_reports/sonar-report-coverage.xml UnitTest
   post:
     - cp -R unit_test_reports/* $CIRCLE_ARTIFACTS
+    - pybot testSearch.txt
 deployment:
   production:
     branch: master
