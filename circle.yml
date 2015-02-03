@@ -2,8 +2,6 @@ machine:
   php:
     version: 5.3.3
 dependencies:
-  cache_directories:
-    - robotframework==2.8.7
   override:
     - mkdir -p build/logs
     - composer install --dev --no-interaction
@@ -13,7 +11,9 @@ dependencies:
   post:
       - wget https://pypi.python.org/packages/source/r/robotframework/robotframework-2.8.7.tar.gz
       - tar -zxvf robotframework-2.8.7.tar.gz
-      - if [[ ! -e robotframework==2.8.7 ]]; then wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py && sudo pip install robotframework==2.8.7; fi
+      - wget https://bootstrap.pypa.io/get-pip.py
+      - sudo python get-pip.py
+      - sudo pip install robotframework==2.8.7	  
       - sudo pip install robotframework-selenium2library
 test:
   pre:
