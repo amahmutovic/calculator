@@ -15,6 +15,8 @@ dependencies:
       - sudo python get-pip.py
       - sudo pip install robotframework==2.8.7	  
       - sudo pip install robotframework-selenium2library
+  cache_directories:
+      - sudo
 test:
   pre:
     - mkdir unit_test_reports
