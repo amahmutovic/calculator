@@ -25,4 +25,4 @@ deployment:
   production:
     branch: master
     commands:
-      - echo DO something else
+      - echo DO something else test test tes
