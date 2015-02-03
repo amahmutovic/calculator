@@ -11,6 +11,7 @@ dependencies:
   post:
       - wget https://pypi.python.org/packages/source/r/robotframework/robotframework-2.8.7.tar.gz
       - tar -zxvf robotframework-2.8.7.tar.gz
+  cache_directories:
       - wget https://bootstrap.pypa.io/get-pip.py
       - sudo python get-pip.py
       - sudo pip install robotframework==2.8.7	  
@@ -23,7 +24,6 @@ test:
   post:
     - cp -R unit_test_reports/* $CIRCLE_ARTIFACTS
     - pybot testArmin.robot
-    - pybot testSearch.txt
 deployment:
   production:
     branch: master
