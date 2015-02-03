@@ -8,13 +8,6 @@ dependencies:
     - pecl install xdebug
     - ls -la ~/.phpenv/versions/$(phpenv version-name)
     - echo "extension=xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
-  post:
-      - wget https://pypi.python.org/packages/source/r/robotframework/robotframework-2.8.7.tar.gz
-      - tar -zxvf robotframework-2.8.7.tar.gz
-      - wget https://bootstrap.pypa.io/get-pip.py
-      - sudo python get-pip.py
-      - sudo pip install robotframework==2.8.7	  
-      - sudo pip install robotframework-selenium2library
   cache_directories:
       - home/ubuntu
 test:
