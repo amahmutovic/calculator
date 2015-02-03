@@ -13,8 +13,7 @@ dependencies:
       - tar -zxvf robotframework-2.8.7.tar.gz
       - wget https://bootstrap.pypa.io/get-pip.py
       - sudo python get-pip.py
-      - sudo pip install robotframework==2.8.7    
-	  
+      - sudo pip install robotframework==2.8.7	  
 test:
   pre:
     - mkdir unit_test_reports
