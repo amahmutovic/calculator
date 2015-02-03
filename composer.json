@@ -1,5 +1,5 @@
 {
     "require": {
-        "phpunit/php-code-coverage": "~2.0"
+      "phpunit/php-code-coverage": "~2.0"
     }
 }
