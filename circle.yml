@@ -5,8 +5,9 @@ dependencies:
   cache_directories:
       - get-pip
   pre: 
-      -  if [[ ! -e get-pip ]]; then mkdir get-pip && cd get-pip && wget https://bootstrap.pypa.io/get-pip.py && sudo pip install robotframework==2.8.7 && sudo pip install robotframework-selenium2library; fi
-      -  sudo python get-pip.py
+      -  if [[ ! -e get-pip ]]; then mkdir get-pip && cd get-pip && wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py; fi
+      - sudo pip install robotframework==2.8.7
+      - sudo pip install robotframework-selenium2library
   override:
       - mkdir -p build/logs
       - composer install --dev --no-interaction
