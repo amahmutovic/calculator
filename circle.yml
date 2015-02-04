@@ -14,8 +14,7 @@ dependencies:
       - ls -la ~/.phpenv/versions/$(phpenv version-name)
       - echo "extension=xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
   post:
-      - pwd
-      - cd get-pip
+      - pwd get-pip
 test:
   pre:
     - mkdir unit_test_reports
