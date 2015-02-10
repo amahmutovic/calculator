@@ -22,7 +22,7 @@ test:
     - phpunit --log-junit unit_test_reports/sonar-report.xml --coverage-clover unit_test_reports/sonar-report-coverage.xml UnitTest
   post:
     - cp -R unit_test_reports/* $CIRCLE_ARTIFACTS
-    - pybot testni.robot
+    - pybot testArmin.robot
 deployment:
   production:
     branch: master
