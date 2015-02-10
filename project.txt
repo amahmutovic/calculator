@@ -1,0 +1,73 @@
+*** Settings ***
+Library           Selenium2Library
+Library           Collections
+Library           Dialogs
+Library           Process
+Library           OperatingSystem
+
+*** Test Cases ***
+storage
+    search
+
+*** Keywords ***
+search
+    Set Selenium Speed    1 seconds
+    Open Browser    http:google.com    firefox
+    Maximize Browser Window
+    Capture Page Screenshot
+    Click Element    gb_70
+    Click Element    link-signup
+    Input first name    test
+    Input last name    test
+    Capture Page Screenshot
+    Input adress    anyaddressatall
+    Input pass    givemepass
+    Confirm pass    givemepass
+    Capture Page Screenshot
+    Click element    month-label
+    Click element    :0
+    Capture Page Screenshot
+    Click element    :7
+    Capture Page Screenshot
+    Input day    6
+    Input year    1986
+    Capture Page Screenshot
+    Select Checkbox    SkipCaptcha
+    Click element    :d
+    Click element    :f
+    Input number    6996965959
+    Capture Page Screenshot
+    Select Checkbox    TermsOfService
+    Capture Page Screenshot
+
+Input first name
+    [Arguments]    ${fname}
+    Input text    FirstName    ${fname}
+
+Input last name
+    [Arguments]    ${lname}
+    Input text    LastName    ${lname}
+
+Input adress
+    [Arguments]    ${adress}
+    Input text    GmailAddress    ${adress}
+
+Input pass
+    [Arguments]    ${pass}
+    Input Password    Passwd    ${pass}
+
+Confirm pass
+    [Arguments]    ${conpass}
+    Input Password    PasswdAgain    ${conpass}
+
+Input day
+    [Arguments]    ${day}
+    Input text    BirthDay    ${day}
+
+Input year
+    [Arguments]    ${year}
+    Input text    BirthYear    ${year}
+
+Input number
+    [Arguments]    ${number}
+    Input text    RecoveryPhoneNumber    ${number}
