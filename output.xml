@@ -1,82 +1,310 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20150203 14:22:20.761" generator="Robot 2.8.1 (Python 2.7.9 on win32)">
-<suite source="C:\Users\armin\Documents\GitHub\calculator\testSearch.txt" id="s1" name="testSearch">
-<test id="s1-t1" name="Open Page">
-<kw type="kw" name="Open Search Page">
+<robot generated="20150210 16:40:53.962" generator="Robot 2.8.1 (Python 2.7.9 on win32)">
+<suite source="C:\Users\armin\Documents\GitHub\calculator\project.txt" id="s1" name="Project">
+<test id="s1-t1" name="storage">
+<kw type="kw" name="search">
 <doc></doc>
 <arguments>
 </arguments>
+<kw type="kw" name="Selenium2Library.Set Selenium Speed">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1 seconds</arg>
+</arguments>
+<status status="PASS" endtime="20150210 16:40:57.247" starttime="20150210 16:40:57.247"></status>
+</kw>
 <kw type="kw" name="Selenium2Library.Open Browser">
 <doc>Opens a new browser instance to given URL.</doc>
 <arguments>
-<arg>${LOGIN URL}</arg>
-<arg>${BROWSER}</arg>
+<arg>http:google.com</arg>
+<arg>firefox</arg>
 </arguments>
-<msg timestamp="20150203 14:22:21.091" level="INFO">Opening browser 'ff' to base url 'http://www.bing.com/'</msg>
-<status status="PASS" endtime="20150203 14:22:28.968" starttime="20150203 14:22:21.091"></status>
-</kw>
-<status status="PASS" endtime="20150203 14:22:28.969" starttime="20150203 14:22:21.090"></status>
+<msg timestamp="20150210 16:40:57.248" level="INFO">Opening browser 'firefox' to base url 'http:google.com'</msg>
+<status status="PASS" endtime="20150210 16:41:16.199" starttime="20150210 16:40:57.248"></status>
 </kw>
 <kw type="kw" name="Selenium2Library.Maximize Browser Window">
 <doc>Maximizes current browser window.</doc>
 <arguments>
 </arguments>
-<status status="PASS" endtime="20150203 14:22:30.027" starttime="20150203 14:22:28.973"></status>
+<status status="PASS" endtime="20150210 16:41:17.552" starttime="20150210 16:41:16.199"></status>
 </kw>
-<kw type="kw" name="Input Query Text">
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20150210 16:41:18.857" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150210 16:41:18.857" starttime="20150210 16:41:17.552"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>gb_70</arg>
+</arguments>
+<msg timestamp="20150210 16:41:18.858" level="INFO">Clicking element 'gb_70'.</msg>
+<status status="PASS" endtime="20150210 16:41:21.209" starttime="20150210 16:41:18.858"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>link-signup</arg>
+</arguments>
+<msg timestamp="20150210 16:41:21.209" level="INFO">Clicking element 'link-signup'.</msg>
+<status status="PASS" endtime="20150210 16:41:25.294" starttime="20150210 16:41:21.209"></status>
+</kw>
+<kw type="kw" name="Input first name">
 <doc></doc>
 <arguments>
-<arg>nba</arg>
+<arg>test</arg>
 </arguments>
 <kw type="kw" name="Selenium2Library.Input Text">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
-<arg>sb_form_q</arg>
-<arg>${query}</arg>
+<arg>FirstName</arg>
+<arg>${fname}</arg>
 </arguments>
-<msg timestamp="20150203 14:22:30.043" level="INFO">Typing text 'nba' into text field 'sb_form_q'</msg>
-<status status="PASS" endtime="20150203 14:22:30.690" starttime="20150203 14:22:30.042"></status>
+<msg timestamp="20150210 16:41:25.296" level="INFO">Typing text 'test' into text field 'FirstName'</msg>
+<status status="PASS" endtime="20150210 16:41:28.507" starttime="20150210 16:41:25.296"></status>
 </kw>
-<status status="PASS" endtime="20150203 14:22:30.690" starttime="20150203 14:22:30.041"></status>
+<status status="PASS" endtime="20150210 16:41:28.507" starttime="20150210 16:41:25.294"></status>
 </kw>
-<kw type="kw" name="Selenium2Library.Click Button">
-<doc>Clicks a button identified by `locator`.</doc>
+<kw type="kw" name="Input last name">
+<doc></doc>
 <arguments>
-<arg>sb_form_go</arg>
+<arg>test</arg>
 </arguments>
-<msg timestamp="20150203 14:22:30.691" level="INFO">Clicking button 'sb_form_go'.</msg>
-<status status="PASS" endtime="20150203 14:22:31.279" starttime="20150203 14:22:30.691"></status>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>LastName</arg>
+<arg>${lname}</arg>
+</arguments>
+<msg timestamp="20150210 16:41:28.510" level="INFO">Typing text 'test' into text field 'LastName'</msg>
+<status status="PASS" endtime="20150210 16:41:31.647" starttime="20150210 16:41:28.509"></status>
 </kw>
-<kw type="kw" name="Selenium2Library.Click Link">
-<doc>Clicks a link identified by locator.</doc>
+<status status="PASS" endtime="20150210 16:41:31.647" starttime="20150210 16:41:28.508"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
 <arguments>
 </arguments>
-<msg timestamp="20150203 14:22:31.281" level="FAIL">Keyword 'Selenium2Library.Click Link' expected 1 argument, got 0.</msg>
-<status status="FAIL" endtime="20150203 14:22:31.281" starttime="20150203 14:22:31.280"></status>
+<msg timestamp="20150210 16:41:33.067" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150210 16:41:33.068" starttime="20150210 16:41:31.648"></status>
+</kw>
+<kw type="kw" name="Input adress">
+<doc></doc>
+<arguments>
+<arg>anyaddressatall</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>GmailAddress</arg>
+<arg>${adress}</arg>
+</arguments>
+<msg timestamp="20150210 16:41:33.070" level="INFO">Typing text 'anyaddressatall' into text field 'GmailAddress'</msg>
+<status status="PASS" endtime="20150210 16:41:36.311" starttime="20150210 16:41:33.070"></status>
+</kw>
+<status status="PASS" endtime="20150210 16:41:36.311" starttime="20150210 16:41:33.068"></status>
+</kw>
+<kw type="kw" name="Input pass">
+<doc></doc>
+<arguments>
+<arg>givemepass</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Password">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>Passwd</arg>
+<arg>${pass}</arg>
+</arguments>
+<msg timestamp="20150210 16:41:36.314" level="INFO">Typing password into text field 'Passwd'</msg>
+<status status="PASS" endtime="20150210 16:41:39.578" starttime="20150210 16:41:36.313"></status>
+</kw>
+<status status="PASS" endtime="20150210 16:41:39.578" starttime="20150210 16:41:36.312"></status>
+</kw>
+<kw type="kw" name="Confirm pass">
+<doc></doc>
+<arguments>
+<arg>givemepass</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Password">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>PasswdAgain</arg>
+<arg>${conpass}</arg>
+</arguments>
+<msg timestamp="20150210 16:41:39.579" level="INFO">Typing password into text field 'PasswdAgain'</msg>
+<status status="PASS" endtime="20150210 16:41:42.736" starttime="20150210 16:41:39.579"></status>
+</kw>
+<status status="PASS" endtime="20150210 16:41:42.736" starttime="20150210 16:41:39.578"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20150210 16:41:44.161" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150210 16:41:44.162" starttime="20150210 16:41:42.737"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>month-label</arg>
+</arguments>
+<msg timestamp="20150210 16:41:44.162" level="INFO">Clicking element 'month-label'.</msg>
+<status status="PASS" endtime="20150210 16:41:46.265" starttime="20150210 16:41:44.162"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>:0</arg>
+</arguments>
+<msg timestamp="20150210 16:41:46.265" level="INFO">Clicking element ':0'.</msg>
+<status status="PASS" endtime="20150210 16:41:48.411" starttime="20150210 16:41:46.265"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20150210 16:41:49.872" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150210 16:41:49.872" starttime="20150210 16:41:48.411"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>:7</arg>
+</arguments>
+<msg timestamp="20150210 16:41:49.874" level="INFO">Clicking element ':7'.</msg>
+<status status="PASS" endtime="20150210 16:41:51.979" starttime="20150210 16:41:49.873"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20150210 16:41:53.418" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150210 16:41:53.419" starttime="20150210 16:41:51.980"></status>
+</kw>
+<kw type="kw" name="Input day">
+<doc></doc>
+<arguments>
+<arg>6</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>BirthDay</arg>
+<arg>${day}</arg>
+</arguments>
+<msg timestamp="20150210 16:41:53.422" level="INFO">Typing text '6' into text field 'BirthDay'</msg>
+<status status="PASS" endtime="20150210 16:41:56.509" starttime="20150210 16:41:53.421"></status>
+</kw>
+<status status="PASS" endtime="20150210 16:41:56.509" starttime="20150210 16:41:53.420"></status>
+</kw>
+<kw type="kw" name="Input year">
+<doc></doc>
+<arguments>
+<arg>1986</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>BirthYear</arg>
+<arg>${year}</arg>
+</arguments>
+<msg timestamp="20150210 16:41:56.510" level="INFO">Typing text '1986' into text field 'BirthYear'</msg>
+<status status="PASS" endtime="20150210 16:41:59.596" starttime="20150210 16:41:56.510"></status>
+</kw>
+<status status="PASS" endtime="20150210 16:41:59.596" starttime="20150210 16:41:56.509"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20150210 16:42:01.004" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150210 16:42:01.005" starttime="20150210 16:41:59.597"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Select Checkbox">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>SkipCaptcha</arg>
+</arguments>
+<msg timestamp="20150210 16:42:01.006" level="INFO">Selecting checkbox 'SkipCaptcha'.</msg>
+<status status="PASS" endtime="20150210 16:42:05.135" starttime="20150210 16:42:01.005"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>:d</arg>
+</arguments>
+<msg timestamp="20150210 16:42:05.136" level="INFO">Clicking element ':d'.</msg>
+<status status="PASS" endtime="20150210 16:42:07.260" starttime="20150210 16:42:05.135"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>:f</arg>
+</arguments>
+<msg timestamp="20150210 16:42:07.261" level="INFO">Clicking element ':f'.</msg>
+<status status="PASS" endtime="20150210 16:42:09.356" starttime="20150210 16:42:07.260"></status>
+</kw>
+<kw type="kw" name="Input number">
+<doc></doc>
+<arguments>
+<arg>6996965959</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>RecoveryPhoneNumber</arg>
+<arg>${number}</arg>
+</arguments>
+<msg timestamp="20150210 16:42:09.359" level="INFO">Typing text '6996965959' into text field 'RecoveryPhoneNumber'</msg>
+<status status="PASS" endtime="20150210 16:42:12.570" starttime="20150210 16:42:09.358"></status>
+</kw>
+<status status="PASS" endtime="20150210 16:42:12.570" starttime="20150210 16:42:09.356"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20150210 16:42:13.973" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150210 16:42:13.973" starttime="20150210 16:42:12.570"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Select Checkbox">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>TermsOfService</arg>
+</arguments>
+<msg timestamp="20150210 16:42:13.974" level="INFO">Selecting checkbox 'TermsOfService'.</msg>
+<status status="PASS" endtime="20150210 16:42:18.083" starttime="20150210 16:42:13.974"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20150210 16:42:19.501" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150210 16:42:19.501" starttime="20150210 16:42:18.084"></status>
+</kw>
+<status status="PASS" endtime="20150210 16:42:19.502" starttime="20150210 16:40:57.246"></status>
 </kw>
 <doc></doc>
 <tags>
 </tags>
-<status status="FAIL" endtime="20150203 14:22:31.281" critical="yes" starttime="20150203 14:22:21.089">Keyword 'Selenium2Library.Click Link' expected 1 argument, got 0.</status>
+<status status="PASS" endtime="20150210 16:42:19.503" critical="yes" starttime="20150210 16:40:57.245"></status>
 </test>
-<doc>A resource file with reusable keywords and variables.
-
-The system specific keywords created here form our own
-domain specific language. They utilize keywords provided
-by the imported Selenium2Library.</doc>
+<doc></doc>
 <metadata>
 </metadata>
-<status status="FAIL" endtime="20150203 14:22:31.283" starttime="20150203 14:22:20.762"></status>
+<status status="PASS" endtime="20150210 16:42:19.506" starttime="20150210 16:40:53.963"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" pass="0" id="s1" name="testSearch">testSearch</stat>
+<stat fail="0" pass="1" id="s1" name="Project">Project</stat>
 </suite>
 </statistics>
 <errors>
